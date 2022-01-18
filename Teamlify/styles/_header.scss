@@ -1,0 +1,48 @@
+header {
+  height: 60px;
+  button {
+    color: #fff !important;
+    background: none !important;
+  }
+
+  background: #0c0b10;
+  color: white;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.438);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    span {
+      color: white;
+    }
+    i {
+      color: white;
+    }
+  }
+  #menu,
+  .headerSections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      background-color: #fff;
+    }
+  }
+}
+
+#users {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+#usernameMenu {
+  margin-right: 20px;
+  font-size: 2rem;
+}

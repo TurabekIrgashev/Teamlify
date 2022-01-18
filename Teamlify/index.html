@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BOOTSTRAP CSS LINK -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- FONT AWESOME LINK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>Teamlify</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+
+    <button class="btn btnMode" id="btnGrShow">
+      <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+    </button>
+    <button class="btn btnMode" id="btnMembersShow">
+      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+    </button>
+
+    <header class="px-3">
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <div class="headerSections">
+        <div id="menu" class="d-none">
+          <button class="btn" id="chatBtn">
+            <span>Chat</span> <i class="fas fa-comment"></i>
+          </button>
+          <button class="btn" id="taskboardBtn">
+            <span>TaskBoard</span> <i class="fas fa-list-ul"></i>
+          </button>
+          <button class="btn" id="logOut">LogOut</button>
+
+          <div class="user d-flex align-items-center gap-2">
+            <p class="m-0 p-0" id="usernameMenu"></p>
+            <img alt="" id="menuImg" class="" />
+          </div>
+        </div>
+        <button class="btn btn-primary" id="signupBtn">SignUp</button>
+        <button class="btn btn-primary" id="signInBtn">SignIn</button>
+      </div>
+    </header>
+    <div class="d-flex justify-content-between d-none" id="window">
+      <!-- GROUPS -->
+      <div class="p-2" id="groups">
+        <button class="btn btnMode" id="btnGrHide">
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <h2 class="">Teams</h2>
+        </div>
+        <form action="" id="newGroup">
+          <input type="text" placeholder="Add new Group" id="newGroupInput" />
+          <button class="btn">
+            <i class="fa fa-plus" aria-hidden="true" id="addNewGroupBtn"></i>
+          </button>
+        </form>
+        <div>
+          <ul id="groupLists"></ul>
+        </div>
+      </div>
+      <!-- chats -->
+      <div style="flex: 1" id="chatPage">
+        <div class="" id="chatbody">
+          <div>
+            <div class="actionsHeader w-100">
+              <h3 id="actionsHeaderTitle">Actions</h3>
+            </div>
+
+            <ul id="taskList" class="list-unstyled px-2"></ul>
+          </div>
+          <form action="" id="addForm" class="d-none">
+            <input
+              type="text"
+              class="form-control"
+              name="task"
+              placeholder="Message..."
+            />
+            <button type="submit" class="btn">
+              <i class="fab fa-telegram-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      <!-- TASKBOARD -->
+      <div style="flex: 1" class="d-none" id="taskboardPage">
+        <div class="actionsHeader">
+          <h3 id="taskboardTitle">Taskboard</h3>
+        </div>
+
+        <section id="board">
+          <div class="container-fluid py-4">
+            <div class="d-flex align-items-start" id="lists"></div>
+          </div>
+
+          <div class="container-fluid ps-3">
+            <div class="row">
+              <div class="col-sm-6 col-md-3 addList shadow p-3">
+                <div class="d-flex align-items-center">
+                  <button class="btn" id="addList">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    class="form-control"
+                    placeholder="Add New List"
+                    id="newList"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- MEMBERS -->
+      <div id="members" class="p-2 d-none">
+        <button class="btn btnMode" id="btnMembersHide">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </button>
+        <div id="forAdmin" class=""></div>
+        <div class="mb-4">
+          <h2>Members</h2>
+          <ul id="membersUl" class="members"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGN -->
+    <div class="d-none" id="signContainer">
+      <div class="d-none" id="signupContainer">
+        <div class="col-center mt-5">
+          <div class="w-100 text-center">
+            <h1>sign up</h1>
+            <form action="" id="signupForm">
+              <input
+                type="text"
+                id="signupUsername"
+                placeholder="Enter your username"
+                required
+              />
+              <input
+                type="text"
+                id="signupEmail"
+                placeholder="Enter your email"
+                required
+              />
+              <input
+                type="text"
+                id="signupPass"
+                placeholder="Enter your password"
+                required
+              />
+              <input
+                type="text"
+                id="signupImg"
+                placeholder="Enter your image source"
+                required
+              />
+              <button type="submit" class="btn btn-primary mt-3">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="row d-none" id="signInContainer">
+        <div>
+          <div class="w-100 text-center">
+            <h1>sign In</h1>
+            <form action="" id="signInForm">
+              <input
+                type="text"
+                id="signInEmail"
+                placeholder="Enter your email"
+                required
+              />
+
+              <input
+                type="text"
+                id="signInPass"
+                placeholder="Enter your password"
+                required
+              />
+              <button type="submit" class="btn btn-primary mt-3">Enter</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WELCOME -->
+    <div class="container-fluid" id="welcome">
+      <h1 id="welcomeTitle">Welcome to Teamlify</h1>
+    </div>
+
+    <!-- scripts -->
+
+    <!-- BOOTSTRAP JS LINK -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/display.js"></script>
+    <!-- //FIREBASE -->
+
+    <!-- AUTH JS -->
+    <!-- <script type="module" src="./js/firebase.js"></script> -->
+    <script type="module" src="./js/auth.js"></script>
+    <script type="module" src="./js/chats.js"></script>
+    <script type="module" src="./js/groups.js"></script>
+    <!-- <script src="./js/form.js" type="module"></script> -->
+    <!-- <script type="module" src="./js/taskboardIndex.js"></script> -->
+  </body>
+</html>

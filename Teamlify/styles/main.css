@@ -1,0 +1,767 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  /* Track */
+  /* Handle */
+}
+
+* ::-webkit-scrollbar {
+  width: 5px;
+}
+
+* ::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden !important;
+  background-color: #232227;
+  color: white;
+  position: relative;
+}
+
+.fa-pencil {
+  color: #423905;
+}
+
+.fa-trash-alt {
+  color: #4e034e;
+}
+
+.fa-sign-in-alt {
+  color: #1c361c;
+}
+
+.logo img {
+  width: 300px;
+}
+
+header {
+  height: 60px;
+  background: #0c0b10;
+  color: white;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.438);
+          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.438);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header button {
+  color: #fff !important;
+  background: none !important;
+}
+
+header button span {
+  color: white;
+}
+
+header button i {
+  color: white;
+}
+
+header #menu,
+header .headerSections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+header #menu img,
+header .headerSections img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #fff;
+}
+
+#users {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+}
+
+#usernameMenu {
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+#taskboardPage {
+  overflow-y: auto;
+  height: 90vh;
+  background-image: url(https://cdn.wallpapersafari.com/46/78/exDpS7.jpg);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list {
+  border-radius: 3px;
+  background-color: #264545;
+  width: 300px;
+  color: white !important;
+}
+
+.list .headBtn {
+  background-color: #264545;
+}
+
+.list .headList {
+  position: relative;
+}
+
+.list .headList .ellipse {
+  border-radius: 3px;
+  background-color: #264545;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateX(280px);
+          transform: translateX(280px);
+  z-index: 1;
+}
+
+.list .headList .ellipse .deleteList {
+  color: black !important;
+}
+
+.list .headList .ellipse .editList {
+  background-color: white !important;
+  color: black !important;
+}
+
+.list .todo-body {
+  margin-top: 5px;
+}
+
+.list .todo-body li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #335c5c;
+  margin-top: 5px;
+  border-radius: 3px;
+  border-bottom: 1px solid #b2b9c5;
+  color: white !important;
+}
+
+.list .tasksTodo .btn-checked i:last-child {
+  display: none;
+}
+
+.list .tasksTodo .btn-checked:hover i:first-child {
+  display: none;
+}
+
+.list .tasksTodo .btn-checked:hover i:last-child {
+  display: block;
+}
+
+i {
+  color: white !important;
+}
+
+.addList {
+  background-color: #264545;
+  border-radius: 3px;
+  width: 400px;
+}
+
+.addList i {
+  color: #e05b5b;
+}
+
+input {
+  border: none;
+}
+
+.S {
+  background-color: white;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  border: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.S::-webkit-input-placeholder {
+  color: black;
+}
+
+.S:-ms-input-placeholder {
+  color: black;
+}
+
+.S::-ms-input-placeholder {
+  color: black;
+}
+
+.S::placeholder {
+  color: black;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#signupForm input,
+#signInForm input {
+  display: block;
+  width: 100%;
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  margin-top: 1.5rem;
+  border-bottom: 1px solid #6e0b59;
+  color: #fff;
+}
+
+#signupForm input::-webkit-input-placeholder,
+#signInForm input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.445);
+}
+
+#signupForm input:-ms-input-placeholder,
+#signInForm input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.445);
+}
+
+#signupForm input::-ms-input-placeholder,
+#signInForm input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.445);
+}
+
+#signupForm input::placeholder,
+#signInForm input::placeholder {
+  color: rgba(255, 255, 255, 0.445);
+}
+
+#signContainer {
+  width: 500px;
+  height: 100vh;
+  color: white;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#welcome {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#groups {
+  background-color: #0c0b10;
+  color: white;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  min-width: 300px;
+  height: 100vh;
+  overflow: auto;
+  min-width: 250px;
+}
+
+#groups ul {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 55px;
+}
+
+#groups li {
+  background-color: transparent;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  list-style: none;
+  margin: 5px;
+  padding: 0;
+  border-radius: 3px;
+}
+
+#groups li button {
+  color: #fff;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+#groups li:hover {
+  background-color: #20bfa9 !important;
+  color: black;
+}
+
+#groups li:hover button {
+  color: black;
+}
+
+#groups #newGroup {
+  background-color: blanchedalmond;
+  background: rgba(203, 195, 206, 0.3);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(66, 65, 65, 0.18);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#groups #newGroup i {
+  color: white;
+}
+
+#groups #newGroup input {
+  width: 100%;
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  color: white;
+}
+
+#groups #newGroup input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+#groups #newGroup input:-ms-input-placeholder {
+  color: #fff;
+}
+
+#groups #newGroup input::-ms-input-placeholder {
+  color: #fff;
+}
+
+#groups #newGroup input::placeholder {
+  color: #fff;
+}
+
+.grayColor {
+  background-color: rgba(203, 195, 206, 0.3);
+}
+
+.grayColor input {
+  border: none;
+  outline: none;
+}
+
+.grayColor ::-webkit-input-placeholder {
+  color: white;
+}
+
+.grayColor :-ms-input-placeholder {
+  color: white;
+}
+
+.grayColor ::-ms-input-placeholder {
+  color: white;
+}
+
+.grayColor ::placeholder {
+  color: white;
+}
+
+#groupLists div:first-child {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#groupLists li .btn {
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 !important;
+          flex: 1 !important;
+  text-align: left;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#btnGrShow {
+  position: absolute;
+  left: -10px;
+  top: 110px;
+  display: none;
+}
+
+#btnMembersShow {
+  right: 0;
+  top: 70px;
+  z-index: 1000000000000000;
+  display: none;
+  position: absolute;
+}
+
+#btnGrHide {
+  float: right;
+  display: none;
+}
+
+.hideGroup {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  position: absolute;
+}
+
+.showGroup {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+@media screen and (max-width: 992px) {
+  #btnGrHide,
+  #btnMembersHide {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 852px) {
+  #taskList li {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #taskList li {
+    width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #btnGrHide,
+  #btnMembersHide,
+  #btnGrShow,
+  #btnMembersShow {
+    display: none !important;
+  }
+  #groups {
+    position: relative;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  #members {
+    position: relative;
+    right: 0;
+  }
+}
+
+#members {
+  background-color: #0c0b10;
+  width: 300px;
+  height: 95vh;
+  overflow-y: auto;
+  -webkit-transition: 0.3s all !important;
+  transition: 0.3s all !important;
+}
+
+#members #membersUl,
+#members #membersUlSearched {
+  margin: 0;
+  padding: 0;
+  width: 100% !important;
+}
+
+#members #membersUl li,
+#members #membersUlSearched li {
+  background-color: #264545;
+  width: 100% !important;
+  margin: 5px 0;
+  padding: 0;
+  padding: 10px;
+}
+
+#members #membersUl li img,
+#members #membersUlSearched li img {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+#searchUsersForm {
+  background: rgba(203, 195, 206, 0.3);
+}
+
+#searchUsersForm input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#searchUsersForm input::-webkit-input-placeholder {
+  color: white;
+}
+
+#searchUsersForm input:-ms-input-placeholder {
+  color: white;
+}
+
+#searchUsersForm input::-ms-input-placeholder {
+  color: white;
+}
+
+#searchUsersForm input::placeholder {
+  color: white;
+}
+
+.btnMode {
+  background-color: rgba(102, 7, 74, 0.438);
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btnMode:hover {
+  color: white;
+}
+
+.hideMembers {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  right: -100%;
+  position: absolute;
+}
+
+.showMembers {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+#btnMembersHide {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+#chatbody {
+  width: 100%;
+  height: 90vh;
+  overflow: auto;
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#chatbody #taskList li {
+  background-color: #264545;
+  border-top-left-radius: 0%;
+  width: 60%;
+}
+
+#chatbody #taskList li input {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+#chatbody #addForm input {
+  background-color: transparent;
+}
+
+#chatbody #addForm button {
+  background-color: transparent;
+}
+
+#addForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #001c40 !important;
+  color: white !important;
+  border-radius: 10px !important;
+}
+
+#addForm input {
+  outline: none !important;
+  border: 0 !important;
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.actionsHeader {
+  background: #111e25 !important;
+}
+
+#chatPage {
+  background-image: url(https://cdn.wallpapersafari.com/46/78/exDpS7.jpg);
+}
+
+form {
+  gap: 20px;
+  border-radius: 10px;
+}
+
+li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #00346e;
+  border-radius: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.right {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  float: right;
+}
+
+.chatRight {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.btn {
+  color: white;
+  font-size: 18px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.profile-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.btnCover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.btnCover button {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.actionsHeader {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: #0d0650;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  padding: 5px 10px;
+}
+
+#welcome {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  color: white;
+  background-image: url("https://wallpapercave.com/wp/wp2856135.gif");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+/*# sourceMappingURL=main.css.map */

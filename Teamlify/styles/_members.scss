@@ -1,0 +1,61 @@
+#members {
+  background-color: #0c0b10;
+  width: 300px;
+  height: 95vh;
+  overflow-y: auto;
+  transition: 0.3s all !important;
+  #membersUl,
+  #membersUlSearched {
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+    li {
+      background-color: #264545;
+      width: 100% !important;
+      margin: 5px 0;
+      padding: 0;
+      padding: 10px;
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+#searchUsersForm {
+  background: rgba(203, 195, 206, 0.3);
+  input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+.btnMode {
+  background-color: rgba(102, 7, 74, 0.438);
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  box-shadow: none;
+  &:hover {
+    color: white;
+  }
+}
+
+.hideMembers {
+  transition: 0.3s all;
+  right: -100%;
+  position: absolute;
+}
+.showMembers {
+  transform: translateX(0px);
+}
+#btnMembersHide {
+  margin: 0;
+  margin-bottom: 10px;
+}

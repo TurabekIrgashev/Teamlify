@@ -1,0 +1,154 @@
+#groups {
+  background-color: #0c0b10;
+  color: white;
+  transition: 0.3s all;
+  // transition: 1s all;
+  min-width: 300px;
+  height: 100vh;
+  overflow: auto;
+  ul {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 55px;
+  }
+  li {
+    background-color: transparent;
+    box-shadow: none !important;
+    list-style: none;
+    margin: 5px;
+    padding: 0;
+    border-radius: 3px;
+    button {
+      color: #fff;
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    &:hover {
+      background-color: #20bfa9 !important;
+      color: black;
+
+      button {
+        color: black;
+      }
+    }
+  }
+  min-width: 250px;
+  #newGroup {
+    background-color: blanchedalmond;
+    // background: #111e25;
+    background: rgba(203, 195, 206, 0.3);
+    // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(66, 65, 65, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    i {
+      color: white;
+    }
+
+    input {
+      width: 100%;
+      background-color: transparent !important;
+      border: none;
+      outline: none;
+      margin-left: 10px;
+      color: white;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.grayColor {
+  background-color: rgba(203, 195, 206, 0.3);
+
+  input {
+    border: none;
+    outline: none;
+  }
+  ::placeholder {
+    color: white;
+  }
+}
+#groupLists {
+  div {
+    &:first-child {
+      flex: 1;
+    }
+  }
+  li {
+    .btn {
+      flex: 1 !important;
+      text-align: left;
+      box-shadow: none;
+    }
+  }
+}
+#btnGrShow {
+  position: absolute;
+  left: -10px;
+  top: 110px;
+  display: none;
+}
+#btnMembersShow {
+  right: 0;
+  top: 70px;
+  z-index: 1000000000000000;
+  display: none;
+  position: absolute;
+}
+#btnGrHide {
+  float: right;
+  display: none;
+}
+.hideGroup {
+  transform: translateX(-100%);
+  position: absolute;
+}
+.showGroup {
+  transform: translateX(0px);
+}
+@media screen and (max-width: 992px) {
+  #btnGrHide,
+  #btnMembersHide {
+    display: block;
+  }
+}
+@media screen and (max-width: 852px) {
+  #taskList {
+    li {
+      width: 70% !important;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  #taskList {
+    li {
+      width: 100% !important;
+    }
+  }
+}
+@media screen and (min-width: 993px) {
+  #btnGrHide,
+  #btnMembersHide,
+  #btnGrShow,
+  #btnMembersShow {
+    display: none !important;
+  }
+  #groups {
+    position: relative;
+    transform: translateX(0);
+  }
+  #members {
+    position: relative;
+    right: 0;
+  }
+}

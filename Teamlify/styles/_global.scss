@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+  }
+}
+body {
+  height: 100vh;
+  overflow: hidden !important;
+  background-color: #232227;
+  color: white;
+  position: relative;
+}
+.fa-pencil {
+  color: rgb(66, 57, 5);
+}
+.fa-trash-alt {
+  color: rgb(78, 3, 78);
+}
+.fa-sign-in-alt {
+  color: rgb(28, 54, 28);
+}
+.logo {
+  img {
+    width: 300px;
+  }
+}
